@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Inter, system-ui, sans-serif;
+
+  --color-primary: #8B6F47;
+  --color-primary-dark: #6B5437;
+  --color-primary-light: #A08558;
+
+  --color-secondary: #F5E6D3;
+  --color-secondary-dark: #E5D6C3;
+  --color-secondary-light: #FFF6E8;
+
+  --color-accent: #3E2723;
+  --color-accent-light: #5D4037;
+
+  --color-background: #FAF8F5;
+  --color-text-muted: #6B5D52;
+
+  --max-width-landing: 520px;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-accent antialiased;
+  }
+}
+
+@layer utilities {
+  .tap-highlight-transparent {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .hero-pattern {
+    background-image:
+      linear-gradient(to bottom, #F5E6D3 0%, #E8D9C6 100%),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 35px,
+        rgba(139, 111, 71, 0.05) 35px,
+        rgba(139, 111, 71, 0.05) 37px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 35px,
+        rgba(139, 111, 71, 0.05) 35px,
+        rgba(139, 111, 71, 0.05) 37px
+      );
+  }
+}
